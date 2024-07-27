@@ -1,0 +1,19 @@
+.chatList {
+    width: 300px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.chatListItem {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.chatListItem:hover {
+    background-color: #237376;
+}
+
+.chatListItemActive {
+    background-color: #532222;
+}

@@ -1,0 +1,22 @@
+.messageText {
+    word-wrap: break-word;
+}
+
+.incoming {
+    background-color: #7f0f0f;
+    align-self: flex-start;
+    margin-right: 30%;
+}
+
+.outgoing {
+    /* Light green background for outgoing messages */
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.messageTime {
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    margin-top: 2px;
+}

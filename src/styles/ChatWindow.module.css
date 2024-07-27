@@ -1,0 +1,22 @@
+.chatWindow {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+     background-color: #e5ddd5; /*Similar to WhatsApp's background */
+}
+
+.chatHeader {
+    padding: 10px;
+    /* border-bottom: 1px solid #eee; */
+    /* background-color: #f8f8f8; */
+}
+
+.chatFooter {
+    padding: 10px;
+    /* border-top: 1px solid #eee; */
+    /* background-color: #f8f8f8; */
+}
+
+.chatVisibiity {
+    opacity: 0.6;
+}
