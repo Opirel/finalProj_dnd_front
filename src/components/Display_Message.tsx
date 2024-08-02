@@ -20,6 +20,7 @@ export const DisplayMessage: React.FC<Props> = ({ messageProp }) => {
         
         <Box display={"inline-block"} 
         sx={{
+            // whiteSpace:'norwap',
             opacity:'100%',
             // backgroundcolor:"pink",
         }}

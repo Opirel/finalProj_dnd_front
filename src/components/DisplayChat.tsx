@@ -47,8 +47,9 @@ const DisplayChat = () => {
       {/* <h1>DisplayChat</h1> */}
       <Typography sx={
         { 
+          bgcolor: 'gray',
       display: 'flex', 
-      flexDirection: 'column', 
+      flexDirection: 'column',  
       height: '80vh', 
       overflow: 'hidden',
       // opacity:'50%'
@@ -56,8 +57,8 @@ const DisplayChat = () => {
       //  color:"red"
       }
       }>
-        <h1>DisplayZibi</h1>
-        <StartNewChat/>
+        <h1>{session?.title}</h1>
+        {/* <StartNewChat/> */}
          
         
           

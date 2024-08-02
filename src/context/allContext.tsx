@@ -29,7 +29,8 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({ children })
         try {
             const response = await axios.get<Session[]>(backendUrl);
             setSessions(response.data);
-            console.log("the sessions from get",sessions);
+            
+            // console.log("the sessions from get",sessions);
             
             // console.log("Sessions retrieved from allContext: ", response.data);
             
@@ -38,7 +39,14 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({ children })
             console.error('Failed to fetch sessions:', error);
         }
     };
-
+    const getSessionsdata = async (): Promise<Session[] | undefined> => {
+        try {
+            const response = await axios.get<Session[]>(backendUrl);
+            return response.data;
+        } catch (error) {
+            console.error('Failed to fetch sessions:', error);
+        }
+    };
     const getSession = async (sessionID: string) => {
         try {
             const response = await axios.get<Session>(`${backendUrl}/${sessionID}`);
@@ -80,7 +88,7 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({ children })
     }, []);
 
     return (
-        <SessionContext.Provider value={{ sessions, getSessions, getSession, createSession, updateSession, deleteSession }}>
+        <SessionContext.Provider value={{ sessions, getSessions, getSession, createSession, updateSession, deleteSession ,getSessionsdata  }}>
             {children}
         </SessionContext.Provider>
     );

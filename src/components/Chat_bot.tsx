@@ -11,6 +11,8 @@ const Chat_bot: React.FC<Props> = ({ message }) => {
 
   return (
     <Typography sx={{
+      // whiteSpace:'normal',
+      whiteSpace:'norwap',
       display:"flex",
       backgroundColor: "navy",
       color: 'white',

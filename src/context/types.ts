@@ -15,7 +15,9 @@ export interface SessionContextType {
     sessions: Session[];
     getSessions: () => Promise<void>;
     getSession: (sessionID: string) => Promise<void>;
+    getSessionsdata :() =>Promise<Session[] | undefined>;
     createSession: (data: Session) => Promise<void>;
+
     updateSession: (sessionID: string, data: Session) => Promise<void>;
     deleteSession: (sessionID: string) => Promise<void>;
 }

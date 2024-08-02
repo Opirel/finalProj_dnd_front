@@ -5,15 +5,14 @@ const HomePage = () => {
   return (
     <Box 
       style={{  
-          backgroundImage: `url(${BGImage})`,
-          backgroundPosition: 'center',
+          // backgroundImage: `url(${BGImage})`,
+          backgroundPosition: 'center',  
           backgroundSize: 'cover',
           backgroundRepeat: 'repeat',
           
       }}
-    >\
-    HomePage
-   
+    > 
+
     </Box>
   )
 }

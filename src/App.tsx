@@ -7,6 +7,7 @@ import Greeting from './components/Greeting';
 import { SessionProvider } from './context/allContext'; // Ensure the context is properly set up
 import { Box, Fab, ThemeProvider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 import HomePage from './components/HomePage';
 // import CssBaseline from '@mui/material/CssBaseline';
 import theme from './context/theme'
@@ -18,33 +19,32 @@ import About from './components/About';
 
 function App() {
   
-
- 
-  
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
+    
     setSidebarOpen(!isSidebarOpen);
   };
-
   const handleSendMessage = (message:string) => {
     console.log("Message sent from app:", message);
     // Implement your message sending logic here
   };
+   const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+ 
 
   return (
     <Box 
     sx={{
-      backgroundImage: `url(${BGImage})`,
+      // backgroundImage: `url(${BGImage})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
       }}
       //  backgroundImage: 'C:/Users\user\Desktop\python course\final project-dnd character creator\project\front\src\assets\dark winged mage and fighter arial battle.jpeg'}}
    >
-    <ThemeProvider theme={theme}>
+   
     <SessionProvider>
-     
+    
       <Greeting />
       <BrowserRouter>
         <Routes>
@@ -58,15 +58,18 @@ function App() {
         color="secondary" 
         aria-label="toggle drawer" 
         onClick={toggleSidebar}
-        style={{ position: 'fixed', top: 4, right: 250,
+        style={{ position: 'fixed', top: 4,
+           right: 10,
           fontSize:'small'
          }}
       >
         <MenuIcon/>
       </Fab>
-      <ChatList isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+       
+       <ChatList isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </SessionProvider>
-    </ThemeProvider> 
+    
     </Box>
   );
  
